@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="images/lukhumo.jpg">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a> </li>
+                    <li><a href="#">Phone</a> </li>
+                    <li><a href="#">Services</a> </li>
+                    <li><a href="#">Quote</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="images/animatedHoop.jpg" class="lukhumo">
+            <div id="circle">
+                <div class="service one">
+                    <img src="images/gym.jpg">
+                    <div>
+                        <h1>Schools</h1>
+                        <p>We provide repair and maintenance for schools</p>
+                    </div>
+                </div>
+                <div class="service two">
+                    <img src="images/hoop.jpg">
+                    <div>
+                        <h1>Public Parks</h1>
+                        <p>We Repair and maintain swing,benches and courts </p>
+                    </div>
+                </div>
+                <div class="service three">
+                    <img src="images/street.jpg">
+                    <div>
+                        <h1>Paint</h1>
+                        <p>We paint tarnished paint</p>
+                    </div>
+                </div>
+                <div class="service four">
+                    <img src="images/lightbulb.jpg">
+                    <div>
+                        <h1>Repairs & Maintenance</h1>
+                        <p>We keep our schools and parks sustainable</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <img src="images/arrow.jpg" id="upBtn">
+            <h3>Services</h3>
+            <img src="images/arrow.jpg" id="downBtn">
+        </div>
+
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle")
+        var upBtn = document.getElementById("upBtn")
+        var downBtn = document.getElementById("downBtn")
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upBtn.onclick = function (){
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        downBtn.onclick = function (){
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+
+</body>
+</html>
